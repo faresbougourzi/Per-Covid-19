@@ -1,7 +1,5 @@
 
 import torch
-# import torchvision
-# from torch.utils.data import Dataset, DataLoader
 import numpy as np
 import math
 import cv2
@@ -9,7 +7,6 @@ import csv
 import os
 from skimage import  transform 
 import scipy.io as sio
-# import dlib
 import numpy as np
 import cv2
 import os
@@ -24,8 +21,8 @@ from sklearn.model_selection import train_test_split, KFold
 
 
  
-database_path = '/data/bougourzi/Covid percentage/Cov-19 percentage-20210327T184035Z-001/Database1/Images'
-excel_path = "/data/bougourzi/Covid percentage/Cov-19 percentage-20210327T184035Z-001/Database1/Database_new.xlsx"
+database_path = './Images'
+excel_path = "./Database_new.xlsx"
 
 input_workbook = xlrd.open_workbook(excel_path)
 data_excel = input_workbook.sheet_by_index(0)
