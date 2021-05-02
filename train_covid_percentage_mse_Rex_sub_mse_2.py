@@ -6,28 +6,15 @@ Created on Sat Apr 10 10:47:37 2021
 @author: bougourzi
 """
 
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Apr  2 00:53:20 2021
-
-@author: bougourzi
-"""
-
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
-
-
-# Face Beauty Project
+# Per-Covid-19 Project
 # Bougourzi Fares
+
 from Covid_Per import Covid_Per
 import torch
 import torch.nn as nn
 import torch.nn.functional as F 
 import torch.optim as optim
 import torchvision
-# import numpy as np
 
 import torchvision.transforms as transforms
 import numpy as np
