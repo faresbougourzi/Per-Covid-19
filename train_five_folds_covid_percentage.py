@@ -1,22 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Sat Apr 10 21:13:55 2021
-
-@author: bougourzi
-"""
-
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Apr  2 23:25:02 2021
-
-@author: bougourzi
-"""
-
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
 Created on Fri Apr  2 01:35:03 2021
 
 @author: bougourzi
@@ -24,7 +8,7 @@ Created on Fri Apr  2 01:35:03 2021
 
 
 
-# Face Beauty Project
+# Per-Covid-19 Project
 # Bougourzi Fares
 from Covid_Per import Covid_Per
 import torch
@@ -32,7 +16,6 @@ import torch.nn as nn
 import torch.nn.functional as F 
 import torch.optim as optim
 import torchvision
-# import numpy as np
 
 import torchvision.transforms as transforms
 import numpy as np
@@ -42,36 +25,14 @@ from tqdm import tqdm
 import matplotlib.pyplot as plt
 from scipy.stats import pearsonr
   
-
-
-
-
-
-#############################################################################
-#############################################################################
-###### Fold1
-#############################################################################
-#############################################################################
 torch.set_grad_enabled(True)
 torch.set_printoptions(linewidth=120)    
 
-
-def smooth_l1_loss(input, target, beta):
-    """
-    very similar to the smooth_l1_loss from pytorch, but with
-    the extra beta parameter
-    """
-    n = torch.abs(input - target)
-    cond = n < beta
-    loss = torch.where(cond, 0.5 * n ** 2, n + 0.5 * beta**2 - beta)
-
-    return loss.mean()
-
-
+# Dynamic Huber loss
 def huber_loss(input, target, beta):
     """
-    very similar to the smooth_l1_loss from pytorch, but with
-    the extra beta parameter
+    Dynamic Huber loss function with decreasing 
+    beta parameter during training progress
     """
     n = torch.abs(input - target)
     cond = n <= beta
@@ -101,7 +62,7 @@ train_transform = transforms.Compose([
         transforms.RandomRotation(degrees = (-10,10)),
         transforms.ToTensor()
 ])    
-#  transforms.      transforms.RandomRotation(degrees = (-10,10)),
+
 test_transform = transforms.Compose([
         transforms.ToPILImage(mode='RGB'),
         transforms.Resize((244,244)),
@@ -133,11 +94,7 @@ for fold in range(len(Folds)):
     model = torch.nn.DataParallel(model).module
     model.load_state_dict(torch.load('./Models/2020-12-24_epoch-30_densenet.pth'))
     model.classifier = nn.Linear(2208, 1)
-    model = model.to(device) 
-    
-    # model = torchvision.models.densenet161(pretrained=True)
-    # model.classifier = nn.Linear(2208, 1)
-    # model = model.to(device)     
+    model = model.to(device)     
     
     train_MAE = []
     train_RMSE = []
@@ -166,7 +123,7 @@ for fold in range(len(Folds)):
     
     pc_best = -2
     name = './Models/Dens_'+ str(fold+1)+'_mse_bestx.pt'
-    ##################################   20 0.0001  ############################################################    
+  
     for epoch in range(30):
         epoch_count.append(epoch)
         lr = 0.0001
@@ -174,7 +131,7 @@ for fold in range(len(Folds)):
             lr = 0.00001  
         if epoch>19:
             lr = 0.000001 
-        # optimizer = optim.Adam(model.parameters(), lr = lr)
+            
         beta = beta_min + (1/2)* (beta_max - beta_min ) * (1+ np.cos (np.pi * ((epoch+1)/ 30)))
     
         optimizer = optim.SGD(model.parameters(), lr = lr, momentum=0.9)
