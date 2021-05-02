@@ -6,8 +6,6 @@ Created on Fri Apr  2 01:35:03 2021
 @author: bougourzi
 """
 
-
-
 # Per-Covid-19 Project
 # Bougourzi Fares
 from Covid_Per import Covid_Per
