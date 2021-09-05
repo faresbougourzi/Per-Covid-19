@@ -56,14 +56,14 @@ def PC_mine(preds, labels):
 train_transform = transforms.Compose([
         transforms.ToPILImage(mode='RGB'),
         transforms.Resize((244,244)),
-        transforms.RandomCrop((244,244)),
+        transforms.RandomCrop((224,224)),
         transforms.RandomRotation(degrees = (-10,10)),
         transforms.ToTensor()
 ])    
 
 test_transform = transforms.Compose([
         transforms.ToPILImage(mode='RGB'),
-        transforms.Resize((244,244)),
+        transforms.Resize((224,224)),
         transforms.ToTensor()
 ]) 
 
