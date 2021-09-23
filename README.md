@@ -33,10 +33,16 @@ The pytorch code contains three python codes which are
 # Citation:
 
 ```bash
-@article{valanarasu2021medical,
-  title={Medical Transformer: Gated Axial-Attention for Medical Image Segmentation},
-  author={Valanarasu, Jeya Maria Jose and Oza, Poojan and Hacihaliloglu, Ilker and Patel, Vishal M},
-  journal={arXiv preprint arXiv:2102.10662},
-  year={2021}
+@Article{jimaging7090189,
+AUTHOR = {Bougourzi, Fares and Distante, Cosimo and Ouafi, Abdelkrim and Dornaika, Fadi and Hadid, Abdenour and Taleb-Ahmed, Abdelmalik},
+TITLE = {Per-COVID-19: A Benchmark Dataset for COVID-19 Percentage Estimation from CT-Scans},
+JOURNAL = {Journal of Imaging},
+VOLUME = {7},
+YEAR = {2021},
+NUMBER = {9},
+ARTICLE-NUMBER = {189},
+URL = {https://www.mdpi.com/2313-433X/7/9/189},
+ISSN = {2313-433X},
+DOI = {10.3390/jimaging7090189}
 }
 ```
