@@ -17,11 +17,11 @@ Keywords: COVID-19; deep learning; convolutional neural network; CT-scans; datas
 </p>
 
 # About This Repository:
-This repository contains two main files:
+This repository contains two main parts:
 
 ## 1- Dataset Access folder:
 We deleted the downloding link for the dataset temporarly because this dataset is included in Covid-19 Challenge
-From more details, contact as throught: faresbougourzi@gmail.com
+For more details, contact as throught: faresbougourzi@gmail.com
 
 ## 2- Pytorch Code:
 
