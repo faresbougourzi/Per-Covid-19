@@ -13,7 +13,7 @@ COVID-19 infection recognition is a very important step in the fight against the
 Keywords: COVID-19; deep learning; convolutional neural network; CT-scans; dataset generation
 
 <p align="center">
-  <img src="img/medt1.png" width="800"/>
+  <img src="img/img.png" width="800"/>
 </p>
 
 ### Using the code:
