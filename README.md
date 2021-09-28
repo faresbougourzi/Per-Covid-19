@@ -25,7 +25,7 @@ For more details, contact as throught: faresbougourzi@gmail.com
 
 ## 2- Pytorch Code:
 
-The pytorch code contains three python codes which are 
+The pytorch code contains three python codes which are: 
 - Covid_Per.py: the dataloader function
 - Create_database.py: prepare the dataset with traning and validation sets for the 5-folds cross-validation
 - train_five_folds_covid_percentage.py: training and testing the five-fold experiment
