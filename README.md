@@ -21,7 +21,7 @@ This repository contains two main parts:
 
 ## 1- Dataset Access folder:
 We deleted the downloding link for the dataset temporarly because this dataset is included in Covid-19 Challenge
-For more details, contact as throught: faresbougourzi@gmail.com
+For more details, contact us throught: faresbougourzi@gmail.com
 
 ## 2- Pytorch Code:
 
