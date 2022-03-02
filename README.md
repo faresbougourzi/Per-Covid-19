@@ -20,7 +20,7 @@ Keywords: COVID-19; deep learning; convolutional neural network; CT-scans; datas
 This repository contains two main parts:
 
 ## 1- Download the Dataset:
-# The database is available in GoogleDrive at the link: 
+The database is available in GoogleDrive at the link: 
 
 https://drive.google.com/drive/folders/1cq11VHn8lTChCDicRi_-xxei1FVftejc?usp=sharing
 
