@@ -58,3 +58,23 @@ DOI = {10.3390/jimaging7090189}
   publisher={Multidisciplinary Digital Publishing Institute}
 }
 ```
+If you use the Dynamic Regression Loss functions, Please Cite the original paper:
+
+```bash
+@article{bougourzi_deep_2022,
+	title = {Deep learning based face beauty prediction via dynamic robust losses and ensemble regression},
+	volume = {242},
+	issn = {0950-7051},
+	url = {https://www.sciencedirect.com/science/article/pii/S0950705122000740},
+	doi = {10.1016/j.knosys.2022.108246},
+	language = {en},
+	urldate = {2022-03-02},
+	journal = {Knowledge-Based Systems},
+	author = {Bougourzi, F. and Dornaika, F. and Taleb-Ahmed, A.},
+	year = {2022},
+	keywords = {Convolutional neural network, Deep learning, Ensemble regression, Facial beauty prediction, Robust loss functions},
+	pages = {108246},
+}}
+```
+
+
